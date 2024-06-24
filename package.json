@@ -1,8 +1,10 @@
 {
+  "type": "module",
   "scripts": {
     "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "check-lint": "eslint [0-9]*.js",
-    "dev": "babel-node",
+    "dev": "babel-node 0x00-ES6_basic/0-main.js",
     "test": "jest",
     "full-test": "eslint [0-9]*.js && jest"
   },
