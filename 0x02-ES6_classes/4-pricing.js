@@ -2,8 +2,8 @@ import Currency from './3-currency.js'; // eslint-disable-line
 
 export default class Pricing {
   constructor(amount, currency) {
-    this._amount = amount;
-    this._currency = currency;
+    this.amount = amount; // Use setter during construction
+    this.currency = currency; // Use setter during construction
   }
 
   get amount() {
@@ -11,6 +11,9 @@ export default class Pricing {
   }
 
   set amount(newAmount) {
+    if (typeof newAmount !== 'number') {
+      throw new Error('Amount must be a number');
+    }
     this._amount = newAmount;
   }
 
@@ -19,6 +22,9 @@ export default class Pricing {
   }
 
   set currency(newCurrency) {
+    if (!(newCurrency instanceof Currency)) {
+      throw new Error('Currency must be an instance of Currency');
+    }
     this._currency = newCurrency;
   }
 
