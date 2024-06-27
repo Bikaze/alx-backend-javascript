@@ -1,4 +1,4 @@
-import { uploadPhoto, createUser } from './utils';
+import { uploadPhoto, createUser } from './utils'; // eslint-disable-line
 
 export default function handleProfileSignup() {
   return Promise.all([uploadPhoto(), createUser()])
