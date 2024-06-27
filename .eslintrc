@@ -21,6 +21,7 @@
     "import/extensions": ["error", "ignorePackages"],
     "no-console": "off",
     "no-shadow": "off",
+    "no-underscore-dangle": ["error", { "allowAfterThis": true }],
     "no-restricted-syntax": [
       "error",
       "LabeledStatement",
